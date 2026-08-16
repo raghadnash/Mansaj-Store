@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منسج — أزياء منسوجة بعناية</title>
+<meta name="description" content="متجر منسج للأزياء — قطع مختارة بعناية، تفاصيل وألوان ومقاسات متعددة.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== الهيدر ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">منسج</span>
+      <span class="logo-sub">MANSAJ</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#products">المجموعة</a>
+      <a href="#about">قصتنا</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="عرض السلة">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M3 6h2l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/>
+          <circle cx="9.5" cy="21.5" r="1"/>
+          <circle cx="17.5" cy="21.5" r="1"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== الهيرو ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">مجموعة الخريف — قطع محدودة</p>
+    <h1 class="hero-title">كل قطعة خيط<br>هي حكاية</h1>
+    <p class="hero-text">نختار الأقمشة كما يُختار الورق لرسالة مهمة. تصفّح المجموعة، جرّب المقاسات والألوان، واختر ما يليق بيومك.</p>
+    <a href="#products" class="btn-primary">تصفّح المجموعة</a>
+  </div>
+  <div class="hero-tag" aria-hidden="true">
+    <span>منذ</span>
+    <strong>2024</strong>
+  </div>
+</section>
+
+<!-- ===== شريط الفلاتر ===== -->
+<section class="filters" id="products">
+  <div class="filters-inner">
+    <div class="filter-group">
+      <label for="categoryFilter">الفئة</label>
+      <select id="categoryFilter">
+        <option value="all">جميع الفئات</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="sizeFilter">المقاس</label>
+      <select id="sizeFilter">
+        <option value="all">كل المقاسات</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="sortFilter">الترتيب</label>
+      <select id="sortFilter">
+        <option value="default">الأحدث</option>
+        <option value="price-asc">السعر: الأقل أولاً</option>
+        <option value="price-desc">السعر: الأعلى أولاً</option>
+      </select>
+    </div>
+    <p class="filters-count"><span id="resultsCount">0</span> قطعة</p>
+  </div>
+</section>
+
+<!-- ===== شبكة المنتجات ===== -->
+<main>
+  <section class="products-grid" id="productsGrid" aria-live="polite">
+    <!-- تُبنى بطاقات المنتجات هنا تلقائياً عبر app.js -->
+  </section>
+
+  <p class="empty-state" id="emptyState" hidden>لا توجد قطع مطابقة لهذا الفلتر حالياً.</p>
+</main>
+
+<!-- ===== قسم القصة ===== -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <h2>نُنسج التفاصيل قبل القماش</h2>
+    <p>منسج ليست مجرد متجر أزياء، بل محاولة لإعادة العلاقة بين القطعة وصاحبها. كل موديل يُعرض بصوره الحقيقية، مقاساته، وألوانه المتاحة، لتختار بثقة دون مفاجآت عند الاستلام.</p>
+  </div>
+</section>
+
+<!-- ===== الفوتر ===== -->
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">منسج</span>
+      <p>أزياء منسوجة بعناية، لكل يوم يستحق التفاصيل.</p>
+    </div>
+    <div class="footer-col">
+      <h3>تواصل معنا</h3>
+      <p>واتساب: 070 000 0000</p>
+      <p>info@mansaj.example</p>
+    </div>
+    <div class="footer-col">
+      <h3>تابعنا</h3>
+      <p>إنستغرام · تيك توك</p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 منسج. جميع الحقوق محفوظة.</p>
+</footer>
+
+<!-- ===== مودال المنتج ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="إغلاق">✕</button>
+
+    <div class="modal-gallery">
+      <div class="modal-main-img">
+        <img id="modalMainImg" src="" alt="">
+      </div>
+      <div class="modal-thumbs" id="modalThumbs"></div>
+    </div>
+
+    <div class="modal-info">
+      <p class="modal-category" id="modalCategory"></p>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-price" id="modalPrice"></p>
+      <p class="modal-desc" id="modalDesc"></p>
+
+      <div class="modal-option-group">
+        <span class="option-label">اللون</span>
+        <div class="color-swatches" id="modalColors"></div>
+      </div>
+
+      <div class="modal-option-group">
+        <span class="option-label">المقاس</span>
+        <div class="size-options" id="modalSizes"></div>
+      </div>
+
+      <button class="btn-primary btn-add" id="addToCartBtn">أضف إلى السلة</button>
+      <p class="modal-note" id="modalNote"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== سلة التسوق ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="سلة التسوق">
+  <div class="cart-header">
+    <h2>سلة التسوق</h2>
+    <button class="modal-close" id="cartClose" aria-label="إغلاق السلة">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>الإجمالي</span>
+      <strong id="cartTotal">0 $</strong>
+    </div>
+    <button class="btn-primary" id="checkoutBtn">إتمام الطلب</button>
+    <p class="cart-hint">هذه واجهة عرض فقط دون بوابة دفع فعلية.</p>
+  </div>
+</aside>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
