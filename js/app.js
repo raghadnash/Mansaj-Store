@@ -309,7 +309,7 @@
   });
   mainNav.querySelectorAll("a").forEach(link =>
     link.addEventListener("click", () => mainNav.classList.remove("open"))
-  );ؤي
+  );
 
   /* =========================================================
      تشغيل أولي
